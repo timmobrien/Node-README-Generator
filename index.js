@@ -1,5 +1,6 @@
 // Goal : generate readme file for future projects
 
+// Bringing in packages
 const chalk = require('chalk');
 const inquirer = require('inquirer');
 const fs = require('fs');
@@ -7,11 +8,13 @@ const path =  require('path');
 const templateLocation = path.join(__dirname,'utils','template','readme-template.md');
 const outputLocation = path.join(__dirname, 'output', 'README.md');
 
-const greenConsole = chalk.green;
-const blueConsole = chalk.blue;
+// Use chalk to colour console log text
+const green = chalk.green;
+const blue = chalk.blue;
 
-console.log(greenConsole('Welcome to the README Generator! Please answer the following questions and your README file will be generated'));
-console.log(blueConsole('If you need to add code snippets or line breaks, please use backticks and <br> respectively'));
+// Welcome user
+console.log(green('Welcome to the README Generator! Please answer the following questions and your README file will be generated'));
+console.log(blue('If you need to add code snippets or line breaks, please use backticks and <br> respectively'));
 
 // Questions to ask
 
@@ -73,18 +76,24 @@ inquirer.prompt([
         message: 'What is your GitHub username?',
         name:'github',
     },
+    // project url
     {
         type:'input',
         message:'What is the GitHub project URL?',
         name: 'url'
     }
 
+    // once we have retrieved the answers
 ]).then((ans) => {
+    // convert the license to lowercase for URL
     const lowerCaseLicense = ans.license.toLowerCase()
+    // Retrieves the template
     const template = fs.readFileSync(templateLocation, 'utf-8')
+    // variable to find multiple instances of a word in the string
     const licenses = /{{license}}/g;
     const projectURL = /{{url}}/g
     const profileLink = /{{github-link}}/g
+    // Replace parts of string with relevant information
     const output = template.replace('{{title}}', ans.title)
         .replace('{{licenseLowerCase}}', lowerCaseLicense)
         .replace(licenses, ans.license)
@@ -97,16 +106,8 @@ inquirer.prompt([
         .replace('{{test}}',ans.test)
         .replace(profileLink,`https://github.com/${ans.github}`)
         .replace('{{email}}',ans.email)
-    
+    // Turn the edited variable into a new README
     fs.writeFileSync(outputLocation, output)
-    console.log(greenConsole('Your README File has been exported to ' + outputLocation ))
+    // Notify the user
+    console.log(green('Your README File has been exported to ' + outputLocation ))
 })
-
-
-
-
-
-// once questions are asked
-
-// generate readme file based on the responses
-
