@@ -13,6 +13,12 @@ This tool allows you to easily create a README file, giving you to spend more ti
 
 GitHub URL: [https://github.com/timmobrien/Node-README-generator](https://github.com/timmobrien/Node-README-generator)
 
+
+
+![Demo Video](https://user-images.githubusercontent.com/20904553/179468985-61c06720-715e-4075-b31e-bdf35fa04ce1.mp4)
+
+
+
 ## Table of Contents
 1. [Title](#title)
 
