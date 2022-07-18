@@ -1,17 +1,17 @@
 // Goal : generate readme file for future projects
 
-const chalk = require('chalk')
+const chalk = require('chalk');
 const inquirer = require('inquirer');
 const fs = require('fs');
-const path =  require('path')
-const templateLocation = path.join(__dirname,'utils','template','readme-template.md')
-const outputLocation = path.join(__dirname, 'output', 'README.md')
+const path =  require('path');
+const templateLocation = path.join(__dirname,'utils','template','readme-template.md');
+const outputLocation = path.join(__dirname, 'output', 'README.md');
 
-const greenConsole = chalk.green
-const blueConsole = chalk.blue
+const greenConsole = chalk.green;
+const blueConsole = chalk.blue;
 
-console.log(greenConsole('Welcome to the README Generator! Please answer the following questions and your README file will be generated'))
-console.log(blueConsole('If you need to add code snippets or line breaks, please use backticks and <br> respectively'))
+console.log(greenConsole('Welcome to the README Generator! Please answer the following questions and your README file will be generated'));
+console.log(blueConsole('If you need to add code snippets or line breaks, please use backticks and <br> respectively'));
 
 // Questions to ask
 
@@ -99,7 +99,10 @@ inquirer.prompt([
         .replace('{{email}}',ans.email)
     
     fs.writeFileSync(outputLocation, output)
+    console.log(greenConsole('Your README File has been exported to ' + outputLocation ))
 })
+
+
 
 
 
