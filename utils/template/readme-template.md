@@ -55,4 +55,4 @@ If you have any questions, get in contact with me:
 
 __________________________________________________
 
-> *This README was generated using the [README Generator!](https://github.com/timmobrien/Node-README-Generator)*
+> *This README was generated using the [README Generator!](https://github.com/timmobrien/NodeJS-README-Generator)*

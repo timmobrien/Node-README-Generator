@@ -2,7 +2,7 @@
 
 <center>
 
-# Node README Generator <a name="title"></a><br>
+# NodeJS README Generator <a name="title"></a><br>
 
 ![mit-license](https://img.shields.io/badge/license-MIT-green)
 </center>
@@ -11,7 +11,7 @@
 
 This tool allows you to easily create a README file, giving you to spend more time focusing on the important tasks in your project. The tool collects only the most necessary pieces of information from the user, before adding headers and formatting syntax, leaving the user with a beautiful README.md file that they can easily drag and drop into their next project.
 
-GitHub URL: [https://github.com/timmobrien/Node-README-generator](https://github.com/timmobrien/Node-README-generator)
+GitHub URL: [https://github.com/timmobrien/NodeJS-README-generator](https://github.com/timmobrien/Node-README-generator)
 
 ## Table of Contents
 1. [Title](#title)
@@ -29,7 +29,7 @@ GitHub URL: [https://github.com/timmobrien/Node-README-generator](https://github
 7. [Questions](#questions)
 
 ## Installation <a name="installation"></a>
-Clone the repo to your machine using `git@github.com:/timmobrien/Node-README-generator` <br> Then run `$ npm install` 
+Clone the repo to your machine using `git@github.com:/timmobrien/NodeJS-README-generator` <br> Then run `$ npm install` 
 
 ## Usage <a name="usage"></a>
 Navigate to the root folder and run the following command <br> `node index.js` <br> After inputting your answers, a README file will be generated in the output folder. You can either directly move the file, or copy the contents.
@@ -55,4 +55,4 @@ If you have any questions, get in contact with me:
 
 __________________________________________________
 
-> *This README was generated using the [README Generator!](https://github.com/timmobrien/Node-README-Generator)*
+> *This README was generated using the [README Generator!](https://github.com/timmobrien/NodeJS-README-Generator)*
